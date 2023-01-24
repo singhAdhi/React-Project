@@ -1,14 +1,19 @@
 import React from "react";
+import { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import bklogo from "../../asset/images/BK - Logo.png";
 import Ikirenga from "../../asset/images/Ikirenga.png";
 import "./index.css";
 const Header = () => {
   let navigate = useNavigate();
+  const loggedInUser = () => {
+    return false;
+  };
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
     <>
       <div className="d-flex container">
-        <ul className="col-6 nav-bar">
+        <ul className="col-6 list-none m-0">
           <li>
             <a className="nav-link" href="#0">
               About Us
@@ -43,7 +48,21 @@ const Header = () => {
             <img src={Ikirenga} alt="" />
           </div>
           <div className="col-6 text-end">
-            <button className="my-3 logout-btn">Logout</button>
+            {isLoggedIn ? (
+              <button
+                className="my-3 logout-btn"
+                onClick={() => setIsLoggedIn(false)}
+              >
+                Logout
+              </button>
+            ) : (
+              <button
+                onClick={() => setIsLoggedIn(true)}
+                className="my-3 login-btn"
+              >
+                Login
+              </button>
+            )}
           </div>
         </div>
       </div>

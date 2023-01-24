@@ -20,7 +20,7 @@
 .header2 {
   background: #0c4da2;
 }
-.logout-btn {
+.logout-btn,.login-btn {
   font-family: "Calibri";
   font-style: normal;
   font-weight: 400;
