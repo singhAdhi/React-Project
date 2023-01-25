@@ -1,7 +1,7 @@
 import React from "react";
-import voucherimg from "../../asset/images/vouchers-img.png";
 import "./index.css";
 import Services from "../../components/Services";
+import { NavLink } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -22,10 +22,10 @@ const Home = () => {
         <div className="container py-5">
           <div className="row">
             <div className="col-md-10 col-12 mx-auto">
-              <h2 class="sec-section-heading text-center">
+              <h2 className="sec-section-heading text-center">
                 Banking Made Exciting!
               </h2>
-              <p class="sec-section-text text-center py-4">
+              <p className="sec-section-text text-center py-4">
                 Earn Ikirenga Points with every routine banking transaction at
                 Bank of Kigali. Your Ikirenga Points give you an opportunity to
                 explore an extensive selection of amazing offers from air
@@ -40,36 +40,40 @@ const Home = () => {
                   img={
                     "https://shopgateway.giift.com:8443/assets/catalog/505b3/d860f/Air%20Travel.jpg"
                   }
+                  path={"/flight"}
                 />
                 <Services
                   name={"Hotel"}
                   img={
                     "https://shopgateway.giift.com:8443/assets/catalog/505b3/f6449/Hotel.jpg"
                   }
+                  path={"#0"}
                 />{" "}
                 <Services
                   name={"Vouchers"}
                   img={
                     "https://idyllic-donut-936500.netlify.app/static/media/vouchers-img.2bc257f4a6efe384dbd4.png"
                   }
+                  path={"#0"}
                 />{" "}
                 <Services
                   name={"Air Time"}
                   img={
                     "https://shopgateway.giift.com:8443/assets/catalog/505b3/b46a7/Airtime.jpg"
                   }
+                  path={"#0"}
                 />
                 <div className="col-12 category-img">
-                  <a href="#0">
-                    <div class="phovv">
+                  <NavLink to={"#0"}>
+                    <div className="phovv">
                       <img
-                        class="w-100 hovv"
+                        className="w-100 hovv"
                         src="https://shopgateway.giift.com:8443/assets/catalog/505b3/61703/BOK%20shop.png"
                       />
-                      <h3 class="img-text">Shop</h3>
-                      <p class="img-desc sec-section-text"></p>
+                      <h3 className="img-text">Shop</h3>
+                      <p className="img-desc sec-section-text"></p>
                     </div>
-                  </a>
+                  </NavLink>
                 </div>
               </div>
             </div>

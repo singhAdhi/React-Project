@@ -1,6 +1,5 @@
-import React from "react";
-import { useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import React,{ useState } from "react";
+import {  useNavigate ,NavLink} from "react-router-dom";
 import bklogo from "../../asset/images/BK - Logo.png";
 import Ikirenga from "../../asset/images/Ikirenga.png";
 import "./index.css";
@@ -13,11 +12,11 @@ const Header = () => {
   return (
     <>
       <div className="d-flex container">
-        <ul className="col-6 list-none m-0">
+        <ul className="col-6 nav-bar m-0">
           <li>
-            <a className="nav-link" href="#0">
+            <NavLink className="nav-link" to={"/about"}>
               About Us
-            </a>
+            </NavLink>
           </li>
           <li>
             <a className="nav-link" href="#0">
@@ -43,10 +42,10 @@ const Header = () => {
       </div>
       <div className="header2">
         <div className="d-flex container">
-          <div className="p-1 col-6">
+          <NavLink className="p-1 col-6" to={"/"}>
             <img className="mx-4" src={bklogo} alt="" />
             <img src={Ikirenga} alt="" />
-          </div>
+          </NavLink>
           <div className="col-6 text-end">
             {isLoggedIn ? (
               <button
@@ -67,11 +66,6 @@ const Header = () => {
         </div>
       </div>
     </>
-    // <div className="d-flex bg-info justify-content-sm-evenly">
-    //   <p>Header Tab</p>
-    //   <button className="btn-link" onClick={() => navigate("/")}>Home</button>
-    //   <button className="btn-link" onClick={() => navigate("/flight")}>Flight</button>
-    // </div>
   );
 };
 

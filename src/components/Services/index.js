@@ -1,13 +1,14 @@
-const Services = ({ name, img }) => {
+import { NavLink} from "react-router-dom";
+const Services = ({ name, img, path }) => {
   return (
     <div className="col-md-6 col-12 category-img">
-      <a href="#0">
-        <div class="phovv">
-          <img class="w-100 hovv" src={img} />
-          <h3 class="img-text">{name}</h3>
-          <p class="img-desc sec-section-text"></p>
+      <NavLink to={path}>
+        <div className="phovv">
+          <img className="w-100 hovv" src={img} />
+          <h3 className="img-text">{name}</h3>
+          <p className="img-desc sec-section-text"></p>
         </div>
-      </a>
+      </NavLink>
     </div>
   );
 };

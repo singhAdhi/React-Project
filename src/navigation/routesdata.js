@@ -4,6 +4,10 @@ import ErrorPage from "./errorpage";
 
 const ROUTESDATA = [
   {
+    path: "*",
+    element: <ErrorPage />,
+  },
+  {
     path: "/",
     element: <Home />,
     errorElement: <ErrorPage />,
