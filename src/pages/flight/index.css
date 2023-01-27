@@ -1,0 +1,11 @@
+.bg-flight{
+    background: url("../../asset/images/flight.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 92vh;
+}
+.form{
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+}

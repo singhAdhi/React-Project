@@ -2,22 +2,12 @@ import React from "react";
 import "./index.css";
 import Services from "../../components/Services";
 import { NavLink } from "react-router-dom";
+import Banner from "../../components/Banner";
 
 const Home = () => {
   return (
     <>
-      <div className="bg-img">
-        <div className="container">
-          <div className="row">
-            <div className="custom-banner d-flex flex-column justify-content-center mt-3">
-              <h1 className="heading-banner">
-                We Reward You For Every Transaction{" "}
-              </h1>
-              <button className="knowmore-btn">Know More</button>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Banner bgImg={"bg-img"} />
       <div className="py-md-5">
         <div className="container py-5">
           <div className="row">
